@@ -18,6 +18,7 @@ int main()
 
         cout << "O que você deseja fazer?" << endl << endl;
         cout << "1. Criar uma matriz" << endl;
+        cout << "2. Somar" << endl;
         cout << "0. Sair" << endl;
 
         cin >> op;
@@ -33,6 +34,18 @@ int main()
                 criar(matrizes);
                 if(!matrizes.empty())
                     matrizes.back()->imprimir();
+                break;
+            
+            case 2:
+            
+                matrizes.push_back(matrizes[0]->somar(matrizes[1]));
+
+                matrizes[0]->imprimir();
+                cout << "+" << endl;
+                matrizes[1]->imprimir();
+                cout << "=" << endl;
+                matrizes[2]->imprimir();
+
                 break;
             
             default:

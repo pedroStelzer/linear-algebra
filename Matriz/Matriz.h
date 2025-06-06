@@ -17,6 +17,8 @@ class Matriz
         Matriz(int linha, int coluna, vector<int> numeros);
         ~Matriz();
 
+        Matriz* somar(Matriz* matriz);
+        
         void imprimir();
 
 };

@@ -97,3 +97,17 @@ void Matriz::imprimir()
 
     cout << "‾‾" << endl;
 };
+
+Matriz* Matriz::somar(Matriz* matriz)
+{
+    vector<int> numeros;
+
+    for(int i = 0; i < this->linhas; i++)
+    {
+        for(int j = 0; j < this->colunas; j++)
+        {
+            numeros.push_back(this->matriz[i][j] + matriz->matriz[i][j]);
+        }
+    }
+    return new Matriz(this->linhas, this->colunas, numeros);
+};
