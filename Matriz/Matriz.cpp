@@ -144,3 +144,17 @@ Matriz* Matriz::multiplicar(Matriz* matriz)
 
     return new Matriz(this->linhas, matriz->colunas, numeros);
 };
+
+Matriz* Matriz::transposta()
+{
+    vector<int> numeros;
+
+    int linhas = this->linhas;
+    int colunas = this->colunas;
+
+    for(int i = 0; i < colunas; i++)
+        for(int j = 0; j < linhas; j++) 
+            numeros.push_back(this->matriz[j][i]);
+
+    return new Matriz(colunas, linhas, numeros);
+}

@@ -21,6 +21,8 @@ class Matriz
         Matriz* subtrair(Matriz* matriz);
         Matriz* multiplicar(Matriz* matriz);
 
+        Matriz* transposta();
+
         void imprimir();
 
 };

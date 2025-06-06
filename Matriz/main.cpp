@@ -21,6 +21,7 @@ int main()
         cout << "2. Somar" << endl;
         cout << "3. Subtrair" << endl;
         cout << "4. Multiplicar" << endl;
+        cout << "5. Transposta" << endl;
         cout << "0. Sair" << endl;
 
         cin >> op;
@@ -73,6 +74,12 @@ int main()
                 matrizes[2]->imprimir();
 
                 break;
+            
+            case 6:
+
+                matrizes.push_back(matrizes[0]->transposta());
+
+                matrizes[1]->imprimir();
             
             default:
                 break;
