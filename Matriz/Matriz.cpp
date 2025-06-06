@@ -125,3 +125,22 @@ Matriz* Matriz::subtrair(Matriz* matriz)
     }
     return new Matriz(this->linhas, this->colunas, numeros);
 };
+
+Matriz* Matriz::multiplicar(Matriz* matriz)
+{
+    vector<int> numeros;
+
+    for(int i = 0; i < this->linhas; i++)
+    {
+        for(int j = 0; j < matriz->colunas; j++)
+        {
+            int resultado = 0;
+
+            for(int k = 0; k < this->linhas; k++) resultado += this->matriz[i][k] * matriz->matriz[k][j];
+
+            numeros.push_back(resultado);
+        }
+    }
+
+    return new Matriz(this->linhas, matriz->colunas, numeros);
+};

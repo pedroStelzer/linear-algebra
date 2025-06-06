@@ -19,6 +19,7 @@ class Matriz
 
         Matriz* somar(Matriz* matriz);
         Matriz* subtrair(Matriz* matriz);
+        Matriz* multiplicar(Matriz* matriz);
 
         void imprimir();
 
