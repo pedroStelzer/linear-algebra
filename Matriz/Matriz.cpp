@@ -158,3 +158,13 @@ Matriz* Matriz::transposta()
 
     return new Matriz(colunas, linhas, numeros);
 }
+
+Matriz* Matriz::simetrica()
+{
+    vector<int> numeros;
+    
+    int linhas = this->linhas;
+    int colunas = this->colunas;
+
+    return new Matriz(colunas, linhas, numeros);
+};

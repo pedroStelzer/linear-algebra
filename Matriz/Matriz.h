@@ -22,6 +22,7 @@ class Matriz
         Matriz* multiplicar(Matriz* matriz);
 
         Matriz* transposta();
+        Matriz* simetrica();
 
         void imprimir();
 

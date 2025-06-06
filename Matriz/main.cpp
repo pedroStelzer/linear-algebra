@@ -22,6 +22,7 @@ int main()
         cout << "3. Subtrair" << endl;
         cout << "4. Multiplicar" << endl;
         cout << "5. Transposta" << endl;
+        cout << "6. Simetrica" << endl;
         cout << "0. Sair" << endl;
 
         cin >> op;
@@ -41,6 +42,8 @@ int main()
             
             case 2:
             
+                // verificar se pode somar
+
                 matrizes.push_back(matrizes[0]->somar(matrizes[1]));
 
                 matrizes[0]->imprimir();
@@ -52,6 +55,8 @@ int main()
                 break;
             
             case 3:
+
+                // verificar se pode subtrair
             
                 matrizes.push_back(matrizes[0]->subtrair(matrizes[1]));
 
@@ -64,7 +69,9 @@ int main()
                 break;
             
             case 4:
-            
+
+                // verificar se pode ter multiplicação de matrizes
+
                 matrizes.push_back(matrizes[0]->multiplicar(matrizes[1]));
 
                 matrizes[0]->imprimir();
@@ -75,11 +82,30 @@ int main()
 
                 break;
             
-            case 6:
+            case 5:
 
                 matrizes.push_back(matrizes[0]->transposta());
-
                 matrizes[1]->imprimir();
+
+                break;
+            
+            case 6:
+
+                bool simetrica = false;
+
+                // verificar se pode ter simetrica
+
+                if(simetrica)
+                {
+                    matrizes.push_back(matrizes[0]->simetrica());
+                    matrizes[1]->imprimir();
+                }
+                else
+                {
+                    cout << "Essa matriz não pode ter matriz simétrica." << endl;
+                }
+
+                break;
             
             default:
                 break;
