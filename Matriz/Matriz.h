@@ -17,6 +17,8 @@ class Matriz
         Matriz(int linha, int coluna, vector<int> numeros);
         ~Matriz();
 
+        void imprimir();
+
 };
 
 #endif // MATRIZ_H
