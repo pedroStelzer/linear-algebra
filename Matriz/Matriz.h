@@ -18,7 +18,8 @@ class Matriz
         ~Matriz();
 
         Matriz* somar(Matriz* matriz);
-        
+        Matriz* subtrair(Matriz* matriz);
+
         void imprimir();
 
 };

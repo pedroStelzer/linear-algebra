@@ -19,6 +19,7 @@ int main()
         cout << "O que você deseja fazer?" << endl << endl;
         cout << "1. Criar uma matriz" << endl;
         cout << "2. Somar" << endl;
+        cout << "3. Subtrair" << endl;
         cout << "0. Sair" << endl;
 
         cin >> op;
@@ -42,6 +43,18 @@ int main()
 
                 matrizes[0]->imprimir();
                 cout << "+" << endl;
+                matrizes[1]->imprimir();
+                cout << "=" << endl;
+                matrizes[2]->imprimir();
+
+                break;
+            
+            case 3:
+            
+                matrizes.push_back(matrizes[0]->subtrair(matrizes[1]));
+
+                matrizes[0]->imprimir();
+                cout << "-" << endl;
                 matrizes[1]->imprimir();
                 cout << "=" << endl;
                 matrizes[2]->imprimir();

@@ -111,3 +111,17 @@ Matriz* Matriz::somar(Matriz* matriz)
     }
     return new Matriz(this->linhas, this->colunas, numeros);
 };
+
+Matriz* Matriz::subtrair(Matriz* matriz)
+{
+    vector<int> numeros;
+
+    for(int i = 0; i < this->linhas; i++)
+    {
+        for(int j = 0; j < this->colunas; j++)
+        {
+            numeros.push_back(this->matriz[i][j] - matriz->matriz[i][j]);
+        }
+    }
+    return new Matriz(this->linhas, this->colunas, numeros);
+};
