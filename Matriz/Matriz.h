@@ -23,6 +23,7 @@ class Matriz
 
         Matriz* transposta();
         bool simetrica();
+        bool anti_simetrica();
 
         void imprimir();
 

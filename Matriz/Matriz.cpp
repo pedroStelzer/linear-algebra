@@ -174,3 +174,19 @@ bool Matriz::simetrica()
 
     return true;
 }
+
+bool Matriz::anti_simetrica()
+{
+    int linhas = this->linhas;
+    int colunas = this->colunas;
+
+    if(colunas != linhas) return false;
+
+    Matriz* matriz_anti_simetrica = this->somar(this->transposta());
+
+    for(int i = 0; i < linhas; i++)
+        for(int j = 0; j < colunas; j++)
+            if(matriz_anti_simetrica->matriz[i][j] != 0) return false;
+    
+    return true;
+}

@@ -23,6 +23,7 @@ int main()
         cout << "4. Multiplicar" << endl;
         cout << "5. Transposta" << endl;
         cout << "6. Simetrica" << endl;
+        cout << "7. Anti-simetrica" << endl;
         cout << "0. Sair" << endl;
 
         cin >> op;
@@ -106,6 +107,27 @@ int main()
                     matrizes[0]->imprimir();
 
                     cout << "\n não é simétrica. Para ser simétrica a matriz precisa: [A] = [A]^t" << endl << endl;
+                }
+
+                break;
+            
+            case 7:
+
+                if(matrizes[0]->anti_simetrica())
+                {
+                    cout << "A matriz: " << endl;
+
+                    matrizes[0]->imprimir();
+
+                    cout << "\n é anti-simétrica" << endl << endl;
+                }
+                else
+                {
+                    cout << "A matriz: " << endl;
+
+                    matrizes[0]->imprimir();
+
+                    cout << "\n não é anti-simétrica. Para ser anti-simétrica a matriz precisa: [A]^t = -A" << endl << endl;
                 }
 
                 break;
