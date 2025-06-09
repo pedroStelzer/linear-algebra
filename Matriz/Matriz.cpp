@@ -159,12 +159,18 @@ Matriz* Matriz::transposta()
     return new Matriz(colunas, linhas, numeros);
 }
 
-Matriz* Matriz::simetrica()
+bool Matriz::simetrica()
 {
-    vector<int> numeros;
-    
     int linhas = this->linhas;
     int colunas = this->colunas;
 
-    return new Matriz(colunas, linhas, numeros);
-};
+    if(colunas != linhas) return false;
+
+    Matriz* transposta = this->transposta();
+
+    for(int i = 0; i < linhas; i++)
+        for(int j = 0; j < colunas; j++)
+            if(transposta->matriz[i][j] != this->matriz[i][j]) return false;
+
+    return true;
+}

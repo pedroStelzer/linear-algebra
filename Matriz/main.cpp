@@ -91,18 +91,21 @@ int main()
             
             case 6:
 
-                bool simetrica = false;
-
-                // verificar se pode ter simetrica
-
-                if(simetrica)
+                if(matrizes[0]->simetrica())
                 {
-                    matrizes.push_back(matrizes[0]->simetrica());
-                    matrizes[1]->imprimir();
+                    cout << "A matriz: " << endl;
+
+                    matrizes[0]->imprimir();
+
+                    cout << "\n é simétrica" << endl << endl;
                 }
                 else
                 {
-                    cout << "Essa matriz não pode ter matriz simétrica." << endl;
+                    cout << "A matriz: " << endl;
+
+                    matrizes[0]->imprimir();
+
+                    cout << "\n não é simétrica. Para ser simétrica a matriz precisa: [A] = [A]^t" << endl << endl;
                 }
 
                 break;
